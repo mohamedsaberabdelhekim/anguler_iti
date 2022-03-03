@@ -1,0 +1,163 @@
+<h1 class="p-2">
+    <img src="{{Store.Logo}}" alt="" width="100" height="100"> {{Store.name}}
+</h1>
+<h2>
+    We offer an explicit discount of:{{propertyType}}
+</h2>
+<!--<div class="btn-group">-->
+<!--  <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown"-->
+<!--          aria-haspopup="true"-->
+<!--          aria-expanded="false">-->
+<!--    This dropdown's menu is right-aligned-->
+<!--  </button>-->
+<!--  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">-->
+
+<label for=""> Product Name</label>
+<select [(ngModel)]="sr">
+  <option *ngFor="let items of ProductList">
+
+
+    {{items.Name}}
+
+  </option>
+</select>
+<label for=""> CateogryID</label>
+<select [(ngModel)]="cat">
+  <option *ngFor="let items of ProductList">
+
+
+    {{items.CateogryID}}
+
+  </option>
+</select>
+
+<!--
+<table class="table text-center">
+    <thead>
+        <td>Name</td>
+        <td>CateogryID</td>
+        <td>Quantity</td>
+        <td>image</td>
+        <td>price</td>
+        <td>Action</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of ProductList" [class.d-none]="item.Quantity==0" [class.bg-warning]="item.Quantity==1">
+            <ng-container *ngIf="item.Name==sr"> -->
+<!-- <ng-container *ngIf="item.CateogryID==cat"> -->
+
+<!-- <td>{{item.Name}}</td>
+            <td>{{item.CateogryID}}</td>
+            <td>{{item.Quantity}}</td>
+            <td>
+                <img src="{{item.image}}" alt=""> -->
+<!-- </td>
+            <td>{{item.price}}</td>
+            <td> -->
+<!-- <button>buy</button> -->
+<!-- <button class="btn btn-primary">buy</button>
+            </td> -->
+<!-- </ng-container> -->
+
+<!-- </tr>
+
+    </tbody>
+</table> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<section style="background-color: #eee;">
+    <div class="container py-5 ml-auto mt-4">
+        <div class="row">
+            <div class="col-md-12 col-lg-4 mb-4 mb-lg-0" *ngFor="let item of ProductList">
+                <ng-container *ngIf="item.Name==sr">
+                    <!-- <ng-container *ngIf="item.CateogryID==cat"> -->
+
+                    <div class="card" [class.d-none]="item.Quantity==0" [class.bg-warning]="item.Quantity==1" appRounded>
+
+                        <img src="{{item.image}}" class="card-img-top" alt="Laptop" />
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                                <p class="small text-danger">{{date | date}}</p>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">{{item.Name}}</h5>
+                                <h5 class="text-dark mb-0">${{item.price}}</h5>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-2">
+                                <p class="text-muted mb-0">Available: <span class="fw-bold">{{item.Quantity}}</span></p>
+                                <button class="btn btn-primary">buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<h1>{{cd|iDnumber}}</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    <a class="dropdown-item" href="#" *ngFor="let item of ProductList">{{item.Name}}</a>-->
+
+<!--  </div>-->
+<!--</div>-->
+
+<!-- <button mat-button color="primary">Primary</button>
+<!--<mat-divider></mat-divider>-->
+<!-- <button mat-raised-button color="primary">Primary</button>
+<button mat-button (click)="openDialog()">Launch dialog</button>
+
+<div>
+<!--  <mat-carousel-->
+<!--    timings="250ms ease-in"-->
+<!--    [autoplay]="true"-->
+
+<!--    color="accent"-->
+<!--    maxWidth="auto"-->
+
+<!--    [loop]="true"-->
+<!--    [hideArrows]="false"-->
+<!--    [hideIndicators]="false"-->
+<!--    [useKeyboard]="true"-->
+<!--    [useMouseWheel]="false"-->
+<!--    orientation="ltr"-->
+<!--  >-->
+<!--    <mat-carousel-slide-->
+<!--      #matCarouselSlide-->
+
+
+<!--      overlayColor="#00000040"-->
+<!--      [hideOverlay]="false"-->
+<!--    ></mat-carousel-slide>-->
+<!--  </mat-carousel>-->
+<!-- </div> -->
